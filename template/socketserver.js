@@ -22,22 +22,18 @@ let getRandomColor = () => {
 
 const run = () => {
   let k = 'foo' // normally this could be dynamic
-  let message = {
+  let msg = {
     data: { color: getRandomColor() },
     mutation: 'store'
   }
-  const storeAndSend = (txt, msg) => {
-    console.log(txt)
-    datastore[k] = msg
-    outgoingQueue.push(JSON.stringify(msg))
-    // console.log('message', msg)
-  }
   if (k in datastore) {
-    if (!identicalObjects(datastore[k].data, message.data)) {
-      storeAndSend('update', message)
+    if (!identicalObjects(datastore[k].data, msg.data)) {
+      datastore[k] = msg
+      outgoingQueue.push(JSON.stringify(msg))
     }
   } else {
-    storeAndSend('insert', message)
+    datastore[k] = msg
+    outgoingQueue.push(JSON.stringify(msg))
   }
 }
 
@@ -45,7 +41,6 @@ wss.on('connection', ws => {
   console.log('connected to client')
   const send = () => {
     while (outgoingQueue.length) {
-      console.log('sending')
       ws.send(outgoingQueue.pop())
     }
   }
