@@ -8,7 +8,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init colwilson/vue-vuex-uws-boilerplate my-project
+$ vue init colwilson/vue-vuex-native-template my-project
 $ cd my-project
 
 # Install node packages
