@@ -1,0 +1,20 @@
+{
+	"prompts": {
+		"name": {
+			"type": "string",
+			"required": true,
+			"message": "Project name"
+		},
+		"description": {
+			"type": "string",
+			"required": false,
+			"message": "Project description",
+			"default": "A Vue2 + Vuex + Native Websockets Project"
+		},
+		"author": {
+			"type": "string",
+			"label": "Author",
+			"required": false
+		}
+	}
+}
