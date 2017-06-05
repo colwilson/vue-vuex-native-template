@@ -1,6 +1,6 @@
-# {name}
+# {{name}}
 
-> {description}
+> {{description}}
 
 ## Build setup
 
@@ -18,4 +18,4 @@ yarn build
 
 ## License
 
-MIT © {author}
+MIT © {{author}}
