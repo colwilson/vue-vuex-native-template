@@ -16,5 +16,6 @@
 			"label": "Author",
 			"required": false
 		}
-	}
+	},
+  "skipInterpolation": "src/**/*.vue"
 }
