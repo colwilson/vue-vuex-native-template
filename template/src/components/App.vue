@@ -1,9 +1,8 @@
-<template>
-  <div class="app">
-    <img src="assets/images/logo.png">
-    <h1>Vue2 + Vuex + Native Websockets Template</h1>
-    <ConnectedWidget :style="{ color: colorFromSocketServer }"/>
-  </div>
+<template lang="pug">
+  .app
+    img(src="assets/images/logo.png")
+    h1 Vue2 + Vuex + Native Websockets Template
+    ConnectedWidget(:style="{ color: colorFromSocketServer }")
 </template>
 
 <script>

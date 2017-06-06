@@ -1,9 +1,8 @@
-<template>
-  <div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
-    {{connectedString}}
-    <i :class="iconClass" aria-hidden="true"></i>
-  </div>
+<template lang="pug">
+  #connected-widget
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+    #connectedString {{connectedString}}
+    i(:class="iconClass", aria-hidden="true")
 </template>
 
 <script>
